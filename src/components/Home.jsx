@@ -6,7 +6,7 @@ const Home = () => {
   return (
     <div
       id="home"
-      className="relative min-h-screen text-white flex flex-col md:flex-row items-center justify-center px-8 md:px-16 lg:px-24 gap-12 mt-[10vh] overflow-hidden bg-[#070F2B]"
+      className="relative min-h-screen text-white flex flex-col md:flex-row items-center justify-center px-6 sm:px-8 md:px-16 lg:px-24 gap-10 md:gap-12 pt-[14vh] pb-24 md:py-24 overflow-hidden bg-[#070F2B]"
     >
       {/* Space Theme Glowing Blobs */}
       <div className="absolute top-1/4 left-1/4 w-72 h-72 rounded-full bg-cyan-500/10 blur-3xl -z-10 pointer-events-none" />
@@ -18,40 +18,40 @@ const Home = () => {
         initial={{ opacity: 0, x: -50 }}
         animate={{ opacity: 1, x: 0 }}
         transition={{ duration: 0.8, ease: 'easeOut' }}
-        className="w-full md:w-1/2 flex flex-col justify-center gap-6 z-10"
+        className="w-full md:w-1/2 flex flex-col justify-center gap-6 z-10 text-center md:text-left items-center md:items-start"
       >
-        <span className="text-sm uppercase tracking-widest text-cyan-400 font-semibold font-['Poppins']">
+        <span className="text-xs sm:text-sm uppercase tracking-widest text-cyan-400 font-semibold font-['Poppins']">
           Welcome to my portfolio
         </span>
-        <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-wide font-['Sora'] leading-tight">
+        <h1 className="text-2xl sm:text-4xl lg:text-5xl font-extrabold tracking-wide font-['Sora'] leading-tight">
           Hi, I'm <br className="hidden sm:inline" />
           <span className="bg-gradient-to-r from-cyan-400 via-sky-400 to-indigo-400 bg-clip-text text-transparent drop-shadow-md">
             Veeramallu Mahesh
           </span>
         </h1>
-        <h2 className="text-xl sm:text-2xl font-semibold text-amber-200/90 font-['Poppins']">
+        <h2 className="text-base sm:text-xl font-semibold text-amber-200/90 font-['Poppins']">
           Java Full Stack Developer & DSA Solver
         </h2>
-        <p className="text-base sm:text-lg text-gray-300 leading-relaxed max-w-xl">
+        <p className="text-xs sm:text-sm sm:text-base text-gray-300 leading-relaxed max-w-xl">
           Passionate about engineering scalable backend microservices, crafting elegant responsive frontends, and resolving algorithmic challenges on LeetCode. Focused on clean design and real-world impact.
         </p>
 
         {/* Action Buttons */}
-        <div className="flex flex-wrap gap-4 mt-2">
+        <div className="flex flex-wrap gap-4 mt-2 justify-center md:justify-start">
           <a href="#projects">
-            <button className="px-6 py-3 rounded-xl bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-semibold tracking-wider transition shadow-[0_0_20px_rgba(6,182,212,0.25)] hover:shadow-[0_0_30px_rgba(6,182,212,0.45)] hover:scale-105 active:scale-95 duration-200">
+            <button className="px-5 py-3 sm:px-6 rounded-xl bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-semibold tracking-wider transition shadow-[0_0_20px_rgba(6,182,212,0.25)] hover:shadow-[0_0_30px_rgba(6,182,212,0.45)] hover:scale-105 active:scale-95 duration-200 cursor-pointer text-sm sm:text-base">
               View Projects
             </button>
           </a>
           <a href="#contact">
-            <button className="px-6 py-3 rounded-xl bg-white/5 border border-white/10 hover:bg-white/10 hover:border-cyan-400/30 text-white font-semibold tracking-wider transition hover:scale-105 active:scale-95 duration-200">
+            <button className="px-5 py-3 sm:px-6 rounded-xl bg-white/5 border border-white/10 hover:bg-white/10 hover:border-cyan-400/30 text-white font-semibold tracking-wider transition hover:scale-105 active:scale-95 duration-200 cursor-pointer text-sm sm:text-base">
               Get In Touch
             </button>
           </a>
         </div>
 
         {/* Social Icons */}
-        <div className="flex gap-4 mt-4">
+        <div className="flex gap-4 mt-4 justify-center md:justify-start">
           {/* LinkedIn */}
           <a
             href="https://linkedin.com/"
@@ -98,13 +98,13 @@ const Home = () => {
         initial={{ opacity: 0, scale: 0.8 }}
         animate={{ opacity: 1, scale: 1 }}
         transition={{ duration: 0.8, ease: 'easeOut', delay: 0.2 }}
-        className="w-full md:w-1/2 flex justify-center items-center z-10"
+        className="w-full md:w-1/2 flex justify-center items-center z-10 py-8 px-4"
       >
         <div className="relative group">
           {/* Animated glow background behind image */}
           <div className="absolute inset-0 rounded-full bg-gradient-to-tr from-cyan-400 to-indigo-600 blur-3xl opacity-50 group-hover:opacity-75 transition duration-500 scale-105" />
           <img
-            className="relative h-[55vh] w-[55vh] object-cover border-10 border-blue-200 rounded-full shadow-[0_0_80px_rgba(34,211,238,0.55)] group-hover:scale-[1.03] transition duration-500"
+            className="relative w-56 h-56 sm:w-72 sm:h-72 md:w-[42vh] md:h-[42vh] lg:w-[48vh] lg:h-[48vh] object-cover border-4 md:border-10 border-blue-200 rounded-full shadow-[0_0_80px_rgba(34,211,238,0.55)] group-hover:scale-[1.03] transition duration-500"
             src={ProfileImg}
             alt="Profile"
           />

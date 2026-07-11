@@ -57,7 +57,7 @@ const About = () => {
   return (
     <div
       id="about"
-      className="relative min-h-screen px-6 py-24 text-white flex flex-col justify-center items-center gap-6 bg-[#070F2B] overflow-hidden"
+      className="relative min-h-screen px-6 py-16 md:py-24 text-white flex flex-col justify-center items-center gap-6 bg-[#070F2B] overflow-hidden"
     >
       {/* Background glow effects */}
       <div className="absolute top-1/3 right-1/4 w-80 h-80 rounded-full bg-cyan-500/5 blur-3xl -z-10 pointer-events-none" />
@@ -69,7 +69,7 @@ const About = () => {
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 0.6 }}
-        className="text-5xl font-bold font-['Sora'] tracking-wide bg-gradient-to-r from-cyan-400 via-sky-400 to-indigo-400 bg-clip-text text-transparent drop-shadow-md text-center"
+        className="text-3xl sm:text-4xl md:text-5xl font-bold font-['Sora'] tracking-wide bg-gradient-to-r from-cyan-400 via-sky-400 to-indigo-400 bg-clip-text text-transparent drop-shadow-md text-center"
       >
         About Me
       </motion.h1>
@@ -80,22 +80,23 @@ const About = () => {
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 0.8, delay: 0.2 }}
-        className="w-full max-w-7xl rounded-[40px] border border-cyan-400/20 bg-white/5 backdrop-blur-md shadow-[0_0_60px_rgba(34,211,238,0.15)] p-10 md:p-16 hover:shadow-[0_0_80px_rgba(34,211,238,0.25)] hover:border-cyan-400/45 transition duration-500 flex flex-col gap-10"
+        className="w-full max-w-7xl rounded-[24px] sm:rounded-[40px] border border-cyan-400/20 bg-white/5 backdrop-blur-md shadow-[0_0_60px_rgba(34,211,238,0.15)] p-6 sm:p-10 md:p-16 hover:shadow-[0_0_80px_rgba(34,211,238,0.25)] hover:border-cyan-400/45 transition duration-500 flex flex-col gap-10"
       >
         <div>
-          <p className="text-[1.2rem] md:text-[1.42rem] leading-relaxed text-zinc-200 font-['Poppins']">
+          <p className="text-[1.05rem] sm:text-[1.2rem] md:text-[1.42rem] leading-relaxed text-zinc-200 font-['Poppins']">
             I’m a <span className="text-cyan-400 font-semibold drop-shadow-sm">B.Tech Computer Science</span> student passionate about <span className="text-cyan-400 font-semibold drop-shadow-sm">Java Full Stack Development</span> and building modern, scalable, and user-friendly web applications. I enjoy transforming ideas into real-world projects and continuously improving my development skills through hands-on learning and practical experience.
           </p>
           <br />
-          <p className="text-[1.2rem] md:text-[1.42rem] leading-relaxed text-zinc-200 font-['Poppins']">
+          <p className="text-[1.05rem] sm:text-[1.2rem] md:text-[1.42rem] leading-relaxed text-zinc-200 font-['Poppins']">
             I have a strong interest in <span className="text-cyan-400 font-semibold drop-shadow-sm">Data Structures and Algorithms</span>, <span className="text-cyan-400 font-semibold drop-shadow-sm">problem-solving</span>, and writing clean, efficient code. I regularly practice coding on LeetCode to strengthen my logical thinking and enhance my understanding of software development concepts. Along with web development, I enjoy exploring new technologies and building projects that solve real-world problems and improve user experience.
           </p>
         </div>
 
         {/* Education Roadmap Journey Section (Clean divider, no duplicate headings) */}
         <div className="w-full border-t border-cyan-500/10 pt-10 flex flex-col gap-4">
-          {/* Interactive Roadmap Map Container */}
-          <div className="w-full rounded-2xl border border-white/5 bg-slate-950/40 backdrop-blur-xs overflow-hidden relative p-1 md:p-3">
+          
+          {/* Desktop/Tablet Journey Map (visible on md+) */}
+          <div className="hidden md:block w-full rounded-2xl border border-white/5 bg-slate-950/40 backdrop-blur-xs overflow-hidden relative p-1 md:p-3">
             <svg
               viewBox="0 0 1000 220"
               className="w-full h-auto drop-shadow-xl"
@@ -268,6 +269,54 @@ const About = () => {
               })}
             </svg>
           </div>
+
+          {/* Mobile Vertical Timeline (visible on screens below md) */}
+          <div className="md:hidden w-full flex flex-col gap-8 relative py-4">
+             {/* Vertical Timeline Axis Line */}
+             <div className="absolute top-0 bottom-0 left-3.5 w-0.5 bg-gradient-to-b from-[#38bdf8] via-[#fb7185] to-[#2dd4bf] opacity-30" />
+             
+             {checkpoints.map((cp) => (
+                <div key={`mobile-${cp.id}`} className="relative pl-10 flex flex-col gap-2">
+                   {/* Map Pin Point Indicator */}
+                   <svg 
+                      className="absolute left-0.5 top-1.5 w-6 h-8 z-10 drop-shadow-[0_0_6px_rgba(255,255,255,0.15)]"
+                      viewBox="0 0 24 32"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path 
+                        d="M12 0C5.37 0 0 5.37 0 12C0 21 12 32 12 32C12 32 24 21 24 12C24 5.37 18.63 0 12 0Z" 
+                        fill={cp.color} 
+                      />
+                      <circle cx="12" cy="12" r="4" fill="#FFFFFF" />
+                    </svg>
+                   <div 
+                      className="p-5 rounded-2xl border bg-slate-900/50 backdrop-blur-xs select-none transition duration-300 hover:scale-[1.01]"
+                      style={{ borderColor: `${cp.color}25` }}
+                   >
+                     <div className="flex items-center gap-2">
+                       <span 
+                         className="w-2 h-2 rounded-full inline-block" 
+                         style={{ backgroundColor: cp.color, boxShadow: `0 0 6px ${cp.color}` }}
+                       />
+                       <h4 className="font-bold text-sm font-['Sora'] text-gray-200">
+                         {cp.title}
+                       </h4>
+                     </div>
+                     <p 
+                       className="text-xs font-semibold tracking-wider font-['Poppins'] uppercase mt-1"
+                       style={{ color: cp.color }}
+                     >
+                       {cp.subtitle}
+                     </p>
+                     <p className="text-[11px] text-zinc-400 font-['Poppins'] mt-2 leading-relaxed">
+                       {cp.description}
+                     </p>
+                   </div>
+                </div>
+             ))}
+          </div>
+
         </div>
       </motion.div>
     </div>

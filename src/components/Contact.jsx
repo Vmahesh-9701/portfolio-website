@@ -43,7 +43,7 @@ const Contact = () => {
   return (
     <div
       id="contact"
-      className="relative min-h-screen px-6 py-24 text-white flex flex-col justify-center items-center gap-12 bg-[#070F2B] overflow-hidden"
+      className="relative min-h-screen px-6 py-16 md:py-24 text-white flex flex-col justify-center items-center gap-12 bg-[#070F2B] overflow-hidden"
     >
       {/* Background blurs */}
       <div className="absolute top-1/4 right-1/4 w-96 h-96 rounded-full bg-indigo-500/5 blur-3xl -z-10 pointer-events-none" />
@@ -57,7 +57,7 @@ const Contact = () => {
         transition={{ duration: 0.6 }}
         className="text-center"
       >
-        <h1 className="text-5xl font-bold font-['Sora'] tracking-wide bg-gradient-to-r from-cyan-400 via-sky-400 to-indigo-400 bg-clip-text text-transparent drop-shadow-md">
+        <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold font-['Sora'] tracking-wide bg-gradient-to-r from-cyan-400 via-sky-400 to-indigo-400 bg-clip-text text-transparent drop-shadow-md">
           Get In Touch
         </h1>
         <p className="text-gray-400 mt-2 font-['Poppins'] tracking-wider text-sm md:text-base">
@@ -73,7 +73,7 @@ const Contact = () => {
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.1 }}
-          className="md:col-span-2 rounded-3xl border border-cyan-400/20 bg-white/5 backdrop-blur-md shadow-[0_0_30px_rgba(34,211,238,0.1)] p-10 md:p-12 flex flex-col justify-between hover:border-cyan-400/35 transition duration-500"
+          className="md:col-span-2 rounded-3xl border border-cyan-400/20 bg-white/5 backdrop-blur-md shadow-[0_0_30px_rgba(34,211,238,0.1)] p-6 sm:p-10 md:p-12 flex flex-col justify-between hover:border-cyan-400/35 transition duration-500"
         >
           <div>
             <h3 className="text-2xl font-bold font-['Sora'] text-gray-100 mb-6">
@@ -94,7 +94,7 @@ const Contact = () => {
                   <h4 className="text-xs uppercase tracking-widest text-gray-400 font-['Poppins']">Email</h4>
                   <a
                     href="mailto:maheshnagagopiveeramallu@gmail.com"
-                    className="text-sm font-semibold text-gray-200 mt-0.5 hover:text-cyan-400 transition"
+                    className="text-xs sm:text-sm font-semibold text-gray-200 mt-0.5 hover:text-cyan-400 transition break-all"
                   >
                     maheshnagagopiveeramallu@gmail.com
                   </a>
@@ -137,7 +137,7 @@ const Contact = () => {
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.2 }}
-          className="md:col-span-3 rounded-3xl border border-cyan-400/20 bg-white/5 backdrop-blur-md shadow-[0_0_30px_rgba(34,211,238,0.1)] p-10 md:p-12 hover:border-cyan-400/35 transition duration-500"
+          className="md:col-span-3 rounded-3xl border border-cyan-400/20 bg-white/5 backdrop-blur-md shadow-[0_0_30px_rgba(34,211,238,0.1)] p-6 sm:p-10 md:p-12 hover:border-cyan-400/35 transition duration-500"
         >
           <form onSubmit={handleSubmit} className="flex flex-col gap-6">
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">

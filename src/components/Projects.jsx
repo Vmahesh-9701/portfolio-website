@@ -49,7 +49,7 @@ const Projects = () => {
   return (
     <div
       id="projects"
-      className="min-h-screen w-full px-8 py-24 text-white flex flex-col justify-center items-center gap-12 bg-[#070F2B] overflow-hidden"
+      className="min-h-screen w-full px-6 md:px-8 py-16 md:py-24 text-white flex flex-col justify-center items-center gap-12 bg-[#070F2B] overflow-hidden"
     >
       {/* Background glow effects */}
       <div className="absolute top-1/3 left-1/4 w-80 h-80 rounded-full bg-blue-500/5 blur-3xl -z-10 pointer-events-none" />
@@ -61,7 +61,7 @@ const Projects = () => {
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 0.6 }}
-        className="text-5xl font-bold font-['Sora'] tracking-wide bg-gradient-to-r from-cyan-400 via-sky-400 to-indigo-400 bg-clip-text text-transparent drop-shadow-md text-center"
+        className="text-3xl sm:text-4xl md:text-5xl font-bold font-['Sora'] tracking-wide bg-gradient-to-r from-cyan-400 via-sky-400 to-indigo-400 bg-clip-text text-transparent drop-shadow-md text-center"
       >
         My Projects
       </motion.h1>
@@ -78,7 +78,7 @@ const Projects = () => {
           <motion.div
             key={idx}
             variants={cardVariants}
-            className={`rounded-[30px] border ${proj.border} bg-white/5 backdrop-blur-md p-10 min-h-[420px] flex flex-col justify-between transition duration-500 ${proj.glow} hover:scale-[1.02]`}
+            className={`rounded-[20px] sm:rounded-[30px] border ${proj.border} bg-white/5 backdrop-blur-md p-6 sm:p-10 min-h-[360px] sm:min-h-[420px] flex flex-col justify-between transition duration-500 ${proj.glow} hover:scale-[1.02]`}
           >
             <div>
               <h2 className="text-2xl font-bold font-['Sora'] text-gray-100 mb-4 tracking-wide leading-tight">

@@ -167,11 +167,11 @@ const Dsa = () => {
   return (
     <div
       id="dsa"
-      className="min-h-screen w-full px-6 md:px-16 py-24 text-white flex flex-col items-center gap-10 bg-[#070F2B] overflow-y-auto"
+      className="min-h-screen w-full px-6 md:px-16 py-16 md:py-24 text-white flex flex-col items-center gap-10 bg-[#070F2B] overflow-y-auto"
     >
       {/* Title section */}
       <div className="text-center mt-6">
-        <h1 className="text-5xl font-bold font-['Sora'] tracking-wide bg-linear-to-r from-orange-400 via-amber-400 to-yellow-500 bg-clip-text text-transparent drop-shadow-md">
+        <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold font-['Sora'] tracking-wide bg-linear-to-r from-orange-400 via-amber-400 to-yellow-500 bg-clip-text text-transparent drop-shadow-md">
           LeetCode Analytics
         </h1>
         <p className="text-gray-400 mt-2 font-['Poppins'] tracking-wider text-sm md:text-base">
@@ -190,7 +190,7 @@ const Dsa = () => {
         {/* Card 1: Profile Summary & Circular Progress (Scaled Up Padding to p-10) */}
         <motion.div
           variants={itemVariants}
-          className="rounded-3xl border border-orange-500/20 bg-white/5 backdrop-blur-md shadow-[0_0_30px_rgba(249,115,22,0.15)] p-10 flex flex-col justify-between items-center text-center group hover:shadow-[0_0_40px_rgba(249,115,22,0.25)] hover:border-orange-500/40 transition duration-500"
+          className="rounded-3xl border border-orange-500/20 bg-white/5 backdrop-blur-md shadow-[0_0_30px_rgba(249,115,22,0.15)] p-6 sm:p-10 flex flex-col justify-between items-center text-center group hover:shadow-[0_0_40px_rgba(249,115,22,0.25)] hover:border-orange-500/40 transition duration-500"
         >
           <div className="w-full">
             {/* Header info */}
@@ -282,7 +282,7 @@ const Dsa = () => {
         {/* Card 2: Difficulty Breakdown & Badges (Scaled Up Padding to p-10) */}
         <motion.div
           variants={itemVariants}
-          className="rounded-3xl border border-orange-500/20 bg-white/5 backdrop-blur-md shadow-[0_0_30px_rgba(249,115,22,0.15)] p-10 flex flex-col justify-between hover:shadow-[0_0_40px_rgba(249,115,22,0.25)] hover:border-orange-500/40 transition duration-500"
+          className="rounded-3xl border border-orange-500/20 bg-white/5 backdrop-blur-md shadow-[0_0_30px_rgba(249,115,22,0.15)] p-6 sm:p-10 flex flex-col justify-between hover:shadow-[0_0_40px_rgba(249,115,22,0.25)] hover:border-orange-500/40 transition duration-500"
         >
           {/* Difficulty progress bars */}
           <div>
@@ -384,7 +384,7 @@ const Dsa = () => {
         {/* Card 3: DSA Topics Progress (Scaled Up Padding to p-10) */}
         <motion.div
           variants={itemVariants}
-          className="rounded-3xl border border-orange-500/20 bg-white/5 backdrop-blur-md shadow-[0_0_30px_rgba(249,115,22,0.15)] p-10 flex flex-col justify-between hover:shadow-[0_0_40px_rgba(249,115,22,0.25)] hover:border-orange-500/40 transition duration-500"
+          className="rounded-3xl border border-orange-500/20 bg-white/5 backdrop-blur-md shadow-[0_0_30px_rgba(249,115,22,0.15)] p-6 sm:p-10 flex flex-col justify-between hover:shadow-[0_0_40px_rgba(249,115,22,0.25)] hover:border-orange-500/40 transition duration-500"
         >
           <div>
             <h3 className="text-2xl font-bold font-['Sora'] tracking-wide mb-6 border-b border-white/10 pb-2">

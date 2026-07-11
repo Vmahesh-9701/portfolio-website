@@ -43,7 +43,7 @@ const Certificates = () => {
   return (
     <div
       id="certificates"
-      className="relative min-h-screen w-full px-6 md:px-16 py-24 text-white flex flex-col justify-center items-center gap-10 bg-[#070F2B] overflow-hidden"
+      className="relative min-h-screen w-full px-6 md:px-16 py-16 md:py-24 text-white flex flex-col justify-center items-center gap-10 bg-[#070F2B] overflow-hidden"
     >
       {/* Background glow effects */}
       <div className="absolute top-1/4 left-1/3 w-80 h-80 rounded-full bg-cyan-500/5 blur-3xl -z-10 pointer-events-none" />
@@ -55,7 +55,7 @@ const Certificates = () => {
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 0.6 }}
-        className="text-5xl font-bold font-['Sora'] tracking-wide bg-gradient-to-r from-cyan-400 via-sky-400 to-indigo-400 bg-clip-text text-transparent drop-shadow-md text-center"
+        className="text-3xl sm:text-4xl md:text-5xl font-bold font-['Sora'] tracking-wide bg-gradient-to-r from-cyan-400 via-sky-400 to-indigo-400 bg-clip-text text-transparent drop-shadow-md text-center"
       >
         My Certificates
       </motion.h1>
@@ -82,7 +82,7 @@ const Certificates = () => {
       </div>
 
       {/* Animated Certificate Glass Container (Scaled Up) */}
-      <div className="w-full max-w-6xl min-h-[560px] flex items-center justify-center relative px-2">
+      <div className="w-full max-w-6xl min-h-auto md:min-h-[560px] flex items-center justify-center relative px-2">
         <AnimatePresence mode="wait" custom={direction}>
           <motion.div
             key={certificate.id}
@@ -98,7 +98,7 @@ const Certificates = () => {
             className="w-full rounded-3xl border border-cyan-400/20 bg-white/5 backdrop-blur-md overflow-hidden flex flex-col md:flex-row shadow-[0_0_60px_rgba(34,211,238,0.15)] hover:border-cyan-400/35 transition duration-500"
           >
             {/* Left Image Side (55%) (Scaled Up Height) */}
-            <div className="w-full md:w-[55%] h-[300px] md:h-[560px] bg-slate-950/40 relative overflow-hidden flex items-center justify-center border-b md:border-b-0 md:border-r border-white/5">
+            <div className="w-full md:w-[55%] h-[220px] sm:h-[300px] md:h-[560px] bg-slate-950/40 relative overflow-hidden flex items-center justify-center border-b md:border-b-0 md:border-r border-white/5">
               <img
                 src={certificate.image}
                 alt={certificate.title}
@@ -107,7 +107,7 @@ const Certificates = () => {
             </div>
 
             {/* Right Details Side (45%) (Scaled Up Padding & Font) */}
-            <div className="w-full md:w-[45%] p-10 md:p-14 flex flex-col justify-between gap-6">
+            <div className="w-full md:w-[45%] p-6 sm:p-10 md:p-14 flex flex-col justify-between gap-6">
               <div>
                 <span className="text-xs uppercase tracking-widest text-cyan-400 font-semibold font-['Poppins']">
                   Verified Credential
