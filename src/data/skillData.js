@@ -5,7 +5,7 @@ import Js from '../assets/Javascript.jpg'
 import Tailwind from '../assets/Tailwind.jpg'
 import Postgresql from '../assets/Postgresql.jpg'
 import RestApi from '../assets/RestApi.jpg'
-import Dsa from '../assets/Dsa.jpg'
+import Dsa from '../assets/DSA.jpg'
 
 export const skillData = [
 

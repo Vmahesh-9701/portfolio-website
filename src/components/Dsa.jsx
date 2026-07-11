@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import { motion } from 'framer-motion'
-import { dsaData } from '../data/dsaData'
+import { dsaData } from '../data/DsaData'
 import lc from '../assets/leetcode.jpg'
 
 const Dsa = () => {

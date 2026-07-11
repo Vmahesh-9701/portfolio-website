@@ -1,11 +1,11 @@
 import awsCloud from '../assets/aws-cloud.png'
-import javaInfosys from '../assets/java-infosys.png'
+import javaInfosys from '../assets/Java-infosys.png'
 import nptelTesting from '../assets/nptel-testing.png'
-import javaFullstack from '../assets/java-fullstack.png'
+import javaFullstack from '../assets/Java-fullstack.png'
 import awsDeveloper from '../assets/aws-developer.png'
 import pythonEssentials1 from '../assets/pythonEssentials1.png'
 import pythonEssentials2 from '../assets/pythonEssentials2.png'
-import awsCloudEduskills from '../assets/awsCloudEduSkills.png'
+import awsCloudEduskills from '../assets/awsCloudEduskills.png'
 import ccna from '../assets/ccna.png'
 
 export const certificateData = [
